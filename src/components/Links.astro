@@ -9,6 +9,7 @@ const button = [
   { label: "Roasting HP", link: "https://roastinghp.vercel.app" },
   { label: "Keluh Kesah", link: "https://keluhkesah.vercel.app" },
   { label: "Count your Character", link: "https://countchar.vercel.app" },
+  { label: "Anime Explorer", link: "https://aldonime.vercel.app"},
 ];
 
 const social = [
@@ -48,7 +49,7 @@ const social = [
       {
         button.map(({ label, link }) => (
           <a href={link}>
-            <Button className="w-96 h-14 text-base" size="lg">
+            <Button className="w-96 h-14 text-base font-semibold" size="lg">
               {label}
             </Button>
           </a>
