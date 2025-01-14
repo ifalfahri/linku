@@ -1,3 +1,7 @@
+---
+import '@fontsource-variable/dm-sans';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,7 +11,7 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Ifal Links</title>
 	</head>
-	<body>
+	<body class="bg-bg">
 		<slot />
 	</body>
 </html>
@@ -15,6 +19,7 @@
 <style>
 	html,
 	body {
+		font-family: 'DM Sans', sans-serif;
 		margin: 0;
 		width: 100%;
 		height: 100%;

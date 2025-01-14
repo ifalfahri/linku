@@ -1,16 +1,59 @@
 ---
 import { Button } from "@/components/ui/button";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import Profile from "../assets/bluelado.png";
 
-const buttonLabels = ["Portfolio", "Roasting HP", "Keluh Kesah"];
+const button = [
+  { label: "Portfolio", link: "https://ifal.me" },
+  { label: "Roasting HP", link: "https://roastinghp.vercel.app" },
+  { label: "Keluh Kesah", link: "https://keluhkesah.vercel.app" },
+  { label: "Count your Character", link: "https://countchar.vercel.app" },
+];
+
+const social = [
+  { icon: "ri:facebook-fill", link: "https://facebook.com/aldo.fiondhy" },
+  { icon: "ri:instagram-fill", link: "https://instagram.com/iexdsgn" },
+  { icon: "ri:linkedin-fill", link: "https://linkedin.com/in/ifalfahri" },
+  { icon: "ri:tiktok-fill", link: "https://tiktok.com/aldofiondhy" },
+];
 ---
 
 <main
   id="container"
-  class="mx-auto justify-center items-center flex max-w-screen-sm max-h-screen"
+  class="mx-auto justify-center items-center flex max-w-screen-sm h-screen container flex-col space-y-6 p-10"
 >
-  <div class="flex flex-col space-y-2">
-    {buttonLabels.map((label) => (
-	  <Button>{label}</Button>
-	))}
+  <div>
+    <Image
+      src={Profile}
+      alt="profile-picture"
+      class="mb-4 mx-auto rounded-full w-20 border-border border-2 shadow-shadow hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
+    />
+    <h1 class="text-3xl text-center font-heading">IfalEX</h1>
+    <p class="text-center text-base">Web Developer - UI/UX - Tech Enthusiast</p>
+  </div>
+  <div class="space-y-10">
+    <div class="flex space-x-4 justify-center">
+      {
+        social.map(({ link, icon }) => (
+          <a href={link}>
+            <Button className="w-12 h-12" size="icon">
+              <Icon name={icon} />
+            </Button>
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex flex-col space-y-4">
+      {
+        button.map(({ label, link }) => (
+          <a href={link}>
+            <Button className="w-96 h-14 text-base" size="lg">
+              {label}
+            </Button>
+          </a>
+        ))
+      }
+    </div>
   </div>
 </main>
