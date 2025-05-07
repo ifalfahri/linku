@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button";
+import { Icon } from "astro-icon/components";
+import '@/styles/globals.css';
+---
+
+<Layout>
+  <main class="mx-auto justify-start items-center flex max-w-screen-sm h-screen container flex-col space-y-6 p-10 relative">
+    <div class="absolute top-6 left-6">
+      <a href="/">
+        <Button variant="neutral" size="icon" className="rounded-full">
+          <Icon name="ri:arrow-left-line" />
+        </Button>
+      </a>
+    </div>
+    
+    <div class="mt-16">
+      <h1 class="text-3xl text-center font-heading">n8n Resources</h1>
+      <p class="text-center text-base mt-2">Beberapa hal berguna</p>
+    </div>
+    
+    <div class="flex flex-col space-y-4 w-full max-w-md">
+      <a href="https://run.claw.cloud/" target="_blank" rel="noopener noreferrer">
+        <Button className="w-full h-14 text-base font-semibold" size="lg">
+          ClawCloud Run
+        </Button>
+      </a>
+      
+      <a href="https://n8n.io/workflows/" target="_blank" rel="noopener noreferrer">
+        <Button className="w-full h-14 text-base font-semibold" size="lg">
+          Template Official
+        </Button>
+      </a>
+      
+      <a href="https://n8n.io/" target="_blank" rel="noopener noreferrer">
+        <Button className="w-full h-14 text-base font-semibold" size="lg">
+          Web n8n
+        </Button>
+      </a>
+    </div>
+    
+    <div class="bg-bw p-6 rounded-base border-2 border-border shadow-shadow w-full max-w-md mt-4">
+      <h2 class="text-xl font-heading mb-3">Cara belajar n8n gimana bang?</h2>
+    <p>Nonton video-video gw, kalo ada yang ga di pahamin silahkan tanya, gratis. Asal jangan minta bikinin aja, bayar itu mah. Selain itu, bisa baca-baca dokumentasi yang ada di internet, terus bisa juga tanya ChatGPT atau AI lainnya. Semangat!🫡</p>
+    </div>
+  </main>
+</Layout>
